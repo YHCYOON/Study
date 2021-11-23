@@ -1,6 +1,6 @@
 package object;
 
-class Book{
+class Book implements Cloneable{
 	String title;
 	String author;
 	
@@ -13,6 +13,20 @@ class Book{
 	public String toString() {
 		return author + ", " + title;
 	}
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+
+		return super.clone();
+	}
+
+	@Override
+	protected void finalize() throws Throwable {
+
+		super.finalize();
+	}
+	
+	
 	
 	
 }
@@ -20,7 +34,7 @@ class Book{
 
 public class ToStringTest {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws CloneNotSupportedException {
 
 		Book book = new Book	("토지", "박경리");
 		
@@ -30,6 +44,9 @@ public class ToStringTest {
 		System.out.println(str);
 		
 		System.out.println(str.toString());
+		
+		Book book2 = (Book)book.clone();
+		System.out.println(book2);
 	}
 
 }
