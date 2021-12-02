@@ -1,0 +1,37 @@
+스키마 - 데이터베이스의 전체적인 구조를 정의한 것
+
+
+SELECT - 테이블에서 값들을 선택
+
+SELECT * FROM people WHERE name LIKE '%na%' 
+
+
+INSERT - 데이터베이스에 정보를 삽입
+
+INSERT INTO gallery VALUES (?, ?, ?, ?)
+
+
+DELETE - 데이터베이스에서 특정 컬럼의 값을 삭제
+
+
+DISTINCT - 중복된 결과를 제거하고 하나만 원하고자 할 때 사용
+
+
+ORDER BY - 오름차순으로 정렬 (DESC 사용시 내림차순)
+
+SELECT COUNT(*) FROM employees WHERE age > 40 
+
+
+GROUP BY - 모든 컬럼 값들의 합계를 반환
+
+
+DELETE TABLE - 데이터는 지워지지만 테이블 용량은 줄어들지 않는다. 원하는 데이터만 지울수 있다. 롤백 가능
+
+TRUNCATE - 용량이 줄어들고 인덱스도 삭제. 테이블을 삭제하지는 않고 데이터만 삭제. 롤백 불가능
+
+DROP - 테이블 전체 삭제. 롤백 불가능
+
+
+Primary Key (기본키) - Null을 허용하지 않음
+
+Unique Key (유일키) - Null을 허용
